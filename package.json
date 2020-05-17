@@ -1,0 +1,24 @@
+{
+  "name": "odo-nodejs-rest-http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexalikiotis/odo-nodejs-rest-http.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexalikiotis/odo-nodejs-rest-http/issues"
+  },
+  "homepage": "https://github.com/alexalikiotis/odo-nodejs-rest-http#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
