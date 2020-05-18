@@ -5,7 +5,7 @@ projects:
   - name: nodejs-rest-http
     source:
       type: git
-      location: "https://github.com/odo-devfiles/nodejs-ex.git"
+      location: "https://github.com/alexalikiotis/odo-nodejs-rest-http.git"
 components:
   - type: dockerimage
     alias: runtime
