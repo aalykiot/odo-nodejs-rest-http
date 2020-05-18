@@ -1,0 +1,30 @@
+apiVersion: 1.0.0
+metadata:
+  generateName: nodejs-
+projects:
+  - name: nodejs-rest-http
+    source:
+      type: git
+      location: "https://github.com/odo-devfiles/nodejs-ex.git"
+components:
+  - type: dockerimage
+    alias: runtime
+    image: registry.access.redhat.com/ubi8/nodejs-12
+    memoryLimit: 256Mi
+    mountSources: true
+    endpoints:
+      - name: "nodejs"
+        port: 8080
+commands:
+  - name: devBuild
+    actions:
+      - type: exec
+        component: runtime
+        command: npm install
+        workdir: ${CHE_PROJECTS_ROOT}/nodejs-rest-http
+  - name: devRun
+    actions:
+      - type: exec
+        component: runtime
+        command: npm start
+        workdir: ${CHE_PROJECTS_ROOT}/nodejs-rest-http
